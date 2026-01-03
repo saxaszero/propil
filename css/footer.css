@@ -1,0 +1,42 @@
+.footer {
+    background: linear-gradient(to right, rgb(250, 150, 237), rgb(255, 37, 190));
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 10px;
+    }
+    
+    .footer-text {
+        font-size: 12px;
+    }
+}

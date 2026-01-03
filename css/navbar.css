@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar {
+    background: linear-gradient(to right, rgb(250, 150, 237), rgb(255, 37, 190), rgb(148, 18, 255));
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    padding-left: 3%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 34px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right:hover {
+    border-radius: 15px;
+}
+
+.nav-item {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.nav-item.active {
+    background: rgb(140, 0, 255);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: none;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.dropbtn:hover {
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+}
+
+.dropdown.active .dropbtn {
+    background: rgb(140, 0, 255);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgb(255, 123, 255);
+    min-width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s;
+}
+
+.dropdown-content a.active {
+    background: rgb(140, 0, 255);
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    background: #b700ff;
+}
+
+.dropdown-content a:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.dropdown-content a:first-child:hover {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.dropdown-content a:nth-child(2) {
+    border-radius: 0;
+}
+
+.dropdown-content a:nth-child(2):hover {
+    border-radius: 0;
+}
+
+.dropdown-content a:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.dropdown-content a:last-child:hover {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.dropdown-toggle:checked ~ .dropdown-content {
+    display: block;
+}
+
+.logout-btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.logout-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.2);
+}
+
+.transform-scale:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .nav-center {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        margin: 0;
+        order: 0;
+    }
+    
+    .nav-left, .nav-right {
+        gap: 10px;
+        order: 1;
+    }
+    
+    .nav-item, .dropbtn, .logout-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    
+    .nav-center {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    
+    .nav-left {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+    
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-item, .dropbtn, .logout-btn {
+        padding: 6px 10px;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dropdown-content {
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        width: 100%;
+        margin-top: 5px;
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 320px) {
+    .dropdown-content {
+        left: 5px;
+        right: 5px;
+        width: calc(100% - 10px);
+    }
+}

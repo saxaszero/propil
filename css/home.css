@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('gambar/medakazenkichiaiexpand.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+    padding-bottom: 50px;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 50px auto 50px;
+    padding: 0 20px;
+}
+
+.welcome-section {
+    position: absolute;
+    text-align: center;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+}
+
+.welcome-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.username {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.highlight {
+    color: #ff37ee;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        margin: 80px auto 40px;
+    }
+    
+    .welcome-title {
+        font-size: 2.2rem;
+    }
+
+    .welcome-section {
+        bottom: 80px;
+    }
+    
+    .username {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        margin: 60px auto 30px;
+        padding: 0 15px;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+
+    .welcome-section {
+        bottom: 60px;
+    }
+}
